@@ -1,0 +1,35 @@
+.card {
+    border-radius: 10px;
+    height: 205px;
+    width: 159px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card img {
+    width: 100%;
+    object-fit: fill;
+  }
+  
+  .banner {
+    position: relative;
+  }
+  
+  .banner .chip {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    position: absolute;
+    left: -6px;
+    top: -10px;
+  }
+  
+  .bannerTitle {
+    color: var(--color-white);
+    width: 159px;
+    margin-top: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+  
