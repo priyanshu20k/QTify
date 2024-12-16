@@ -20,7 +20,7 @@ function App() {
     }
   };
 
-  const getNewAlbums = async () => {
+  const getAlbums = async () => {
     try {
       let newAlbumsResp = await axios.get("https://qtify-backend-labs.crio.do/albums/new");
       setNewAlbums(newAlbumsResp.data);
@@ -29,7 +29,7 @@ function App() {
     }
   }
 
-  const getSongsData = async () => {
+  const getSongs = async () => {
     try{
       let songsDataResp = await axios.get("https://qtify-backend-labs.crio.do/songs");
       setSongsData(songsDataResp.data);
@@ -42,7 +42,7 @@ function App() {
   const generateFilteredSongs = (value)=>{
     let key="";
     if(value===0){
-      getSongsData();
+      getSongs();
     }
     else if(value===1){
       key="rock";
@@ -69,8 +69,8 @@ function App() {
 
   useEffect(() => {
     getTopAlbums();
-    getNewAlbums();
-    getSongsData();
+    getAlbums();
+    getSongs();
   }, []);
 
   return (
